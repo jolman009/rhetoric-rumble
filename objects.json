@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "name": "The Harvard Study",
+        "text": "You cite a peer-reviewed article from 2024.",
+        "type": "Logos",
+        "damage": 20,
+        "cost": 3,
+        "animation": "book-slam"
+    },
+    {
+        "id": "enemy_01",
+        "name": "The Internet Troll",
+        "weakness": "Logos",
+        "resistance": "Pathos",
+        "hp": 100,
+        "dialogue": "U mad bro?"
+    }
+]
