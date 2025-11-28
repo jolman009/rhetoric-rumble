@@ -6,13 +6,13 @@ import { getAnalytics } from "firebase/analytics";
 // TODO: Replace the following with your app's Firebase project configuration
 // See instructions in the chat on how to get these keys.
 const firebaseConfig = {
-    apiKey: "AIzaSyBi_aQeMoHzUpDKiMJpJmDbgB9-MuDcmmM",
-    authDomain: "rhetoric-rumble.firebaseapp.com",
-    projectId: "rhetoric-rumble",
-    storageBucket: "rhetoric-rumble.firebasestorage.app",
-    messagingSenderId: "307279368218",
-    appId: "1:307279368218:web:9ab42ed1d546e7a2fb01a3",
-    measurementId: "G-QTCV33FC5P"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
