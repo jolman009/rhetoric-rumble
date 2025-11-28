@@ -1,8 +1,10 @@
-const Card = ({ card, onClick }) => {
+// Add currentEnergy prop or handle logic in parent
+const Card = ({ card, onClick, disabled }) => { // Accept disabled prop
     return (
         <div
-            onClick={() => onClick(card)}
-            className="bg-white border-2 border-slate-300 rounded-lg p-4 w-48 h-64 shadow-lg hover:scale-105 transition-transform cursor-pointer flex flex-col justify-between"
+            onClick={!disabled ? () => onClick(card) : null}
+            className={`bg-white border-2 rounded-lg p-4 w-48 h-64 shadow-lg flex flex-col justify-between transition-all
+            ${disabled ? "opacity-50 grayscale cursor-not-allowed" : "hover:scale-105 cursor-pointer border-slate-300"}`}
         >
             <div className="font-bold text-lg text-slate-800">{card.name}</div>
             <div className="text-sm text-slate-600 italic">"{card.text}"</div>

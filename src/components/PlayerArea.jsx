@@ -11,7 +11,11 @@ const PlayerArea = ({ hand, hp, onCardPlay }) => {
 
                 <div className="flex justify-center gap-4 overflow-x-auto pb-4">
                     {hand.map((card) => (
-                        <Card key={card.id} card={card} onClick={onCardPlay} />
+                        <Card
+                            key={card.id}
+                            card={card}
+                            onClick={onCardPlay}
+                            disabled={currentEnergy < card.cost} />
                     ))}
                 </div>
             </div>
